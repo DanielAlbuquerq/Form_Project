@@ -17,7 +17,7 @@ function checkInputs(){
     const passwordConfirmationValue = passConfirmation.value
 
     if (usernameValue == ''){
-        setErrorFor(username, "User name is required");
+        setErrorFor(username, "User name is required.");
     } else {
         setSucessFor(username);
     }
@@ -31,18 +31,18 @@ function checkInputs(){
     }
 
     if (passwordValue == ''){
-        setErrorFor(password, 'Password is required');
+        setErrorFor(password, 'Password is required.');
     } else if(passwordValue.length < 7){
-        setErrorFor(password,"Password must be at least 7 characters");
+        setErrorFor(password,"Password must be at least 7 characters.");
     } else {
         setSucessFor(password);
     }
 
     if(passwordConfirmationValue == ''){
-        setErrorFor(password, "Password confirmation is required");
+        setErrorFor(password, "Password confirmation is required.");
     }
     else if (passwordConfirmationValue != passwordValue){
-        setErrorFor(passConfirmation, "Password confirmation do not match ")
+        setErrorFor(passConfirmation, "Password confirmation do not match.")
     }
     else{
         setSucessFor(passConfirmation); 
