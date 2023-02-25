@@ -17,32 +17,32 @@ function checkInputs(){
     const passwordConfirmationValue = passConfirmation.value
 
     if (usernameValue == ''){
-        setErrorFor(username, "O nome de usuário é obrigatório.");
+        setErrorFor(username, "User name is required");
     } else {
         setSucessFor(username);
     }
 
     if (emailValue == ''){
-        setErrorFor(email, 'O email é obrigatório.');
+        setErrorFor(email, "Email is required.");
     } else if(!checkEmail(emailValue)){
-        setErrorFor(email,"Por favor, insira um email válido.");
+        setErrorFor(email,"That is not a valid email.");
     } else {
         setSucessFor(email);
     }
 
     if (passwordValue == ''){
-        setErrorFor(password, 'A senha é obrigatória.');
+        setErrorFor(password, 'Password is required');
     } else if(passwordValue.length < 7){
-        setErrorFor(password,"A senha precisa ter no mínimo 7 caracteres.");
+        setErrorFor(password,"Password must be at least 7 characters");
     } else {
         setSucessFor(password);
     }
 
     if(passwordConfirmationValue == ''){
-        setErrorFor(password, "A confirmação de senha é obrigatória.");
+        setErrorFor(password, "Password confirmation is required");
     }
     else if (passwordConfirmationValue != passwordValue){
-        setErrorFor(passConfirmation, "As senhas não conferem.")
+        setErrorFor(passConfirmation, "Password confirmation do not match ")
     }
     else{
         setSucessFor(passConfirmation); 
@@ -55,7 +55,7 @@ function checkInputs(){
     });
     
     if(formIsValid){
-        console.log("O formulário está 100% válido!");
+        console.log("Form is 100% valid!");
     }
 
 }
